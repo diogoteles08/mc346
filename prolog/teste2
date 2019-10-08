@@ -1,0 +1,6 @@
+range(0, [])
+range(N,L) :- NN is N-1, range(NN, LL), L = [N|LL]
+
+range(0, [])
+range(N,L) :- NN is N-1, range(NN, LL), append(LL, [N], LLL), L = LLL
+
